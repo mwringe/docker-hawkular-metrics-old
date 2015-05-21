@@ -18,7 +18,7 @@
 # Hawkular-Metrics DockerFile
 #
 # This dockerfile can be used to create a Hawkular-Metrics docker
-# image
+# image to be run on Openshift.
 
 FROM jboss/wildfly:8.2.0.Final
 
@@ -37,7 +37,7 @@ USER jboss
 EXPOSE 8080
 
 # The Hawkular Metrics version
-ENV HAWKULAR_METRICS_VERSION 0.3.2-SNAPSHOT
+ENV HAWKULAR_METRICS_VERSION 0.3.4-SNAPSHOT
 
 # Get and copy the hawkular metrics war to the EAP deployment directory
 RUN cd $JBOSS_HOME/standalone/deployments/ && \
